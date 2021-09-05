@@ -84,7 +84,7 @@
 
 * #### 删除 smtp 端口的许可
  
-*  sudo ufw delete allow smtp
+   sudo ufw delete allow smtp
 
 * #### 允许某特定 IP 访问所有的本机端口
  

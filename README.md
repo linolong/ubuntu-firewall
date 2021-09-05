@@ -9,15 +9,15 @@
 
 ---
 
- **更新环境：**
+## **更新环境：**
  
  apt update -y
 
- **安装 curl**
+## **安装 curl**
  
  apt install -y curl
 
- **添加dns**
+## **添加dns**
  
  echo 'nameserver 223.5.5.5'>>/etc/resolv.conf 
 
@@ -29,37 +29,38 @@
 
 ---
 
-  **安装ufw**
+##  **安装ufw**
  
  sudo apt-get install ufw
 
- **检查防火墙的状态**
+## **检查防火墙的状态**
  
  sudo ufw status
 
- 显示为inactive
+###### 显示为inactive
 
 
- **查询防火墙版本**
+## **查询防火墙版本**
  
  sudo ufw version
 
- **开启/关闭防火墙**
+## **开启/关闭防火墙**
  
  sudo ufw enable
+ 
  sudo ufw disable
 
 ---
 
- **启用**
+## **启用**
  
  sudo ufw enable
  
  sudo ufw default deny
  
- 运行上诉两条命令后，开启系统防火墙，且开机自启，并关闭外部对本机的访问，但本机访问外部正常。
+###### 运行上诉两条命令后，开启系统防火墙，且开机自启，并关闭外部对本机的访问，但本机访问外部正常。
 
- **开启/禁用端口**
+## **开启/禁用端口**
  
  sudo ufw allow [service]
  
@@ -67,32 +68,33 @@
 
 ---
 
- **UFW 使用范例**
+## **UFW 使用范例**
  
- 允许 80 端口
+* #### 允许 80 端口
  
- sudo ufw allow 80/tcp
+   sudo ufw allow 80/tcp
 
- 禁用 80 端口
+* #### 禁用 80 端口
  
- sudo ufw delete allow 80/tcp
+   sudo ufw delete allow 80/tcp
 
- 允许 smtp 端口
+* #### 允许 smtp 端口
  
- sudo ufw allow smtp
+   sudo ufw allow smtp
 
- 删除 smtp 端口的许可
+* #### 删除 smtp 端口的许可
  
- sudo ufw delete allow smtp
+*  sudo ufw delete allow smtp
 
- 允许某特定 IP 访问所有的本机端口
+* #### 允许某特定 IP 访问所有的本机端口
  
- sudo ufw allow from 192.168.xx.xxx 
+   sudo ufw allow from 192.168.xx.xxx 
  
- 删除某特定 IP的规则
+* #### 删除某特定 IP的规则
  
- sudo ufw delete allow from 192.168.xx.xxx
+   sudo ufw delete allow from 192.168.xx.xxx
 
- 另外的表达式
+* #### 另外的表达式
  
- sudo ufw allow proto udp 192.168.x.1 port 50 to 192.168.x.2 port 50
+   sudo ufw allow proto udp 192.168.x.1 port 50 to 192.168.x.2 port 50
+ 

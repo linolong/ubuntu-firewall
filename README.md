@@ -11,14 +11,27 @@
 
 ## **更新环境：**
  
- apt update -y
+ <div class="snippet" markdown="1">
+
+```
+apt update -y
+```
+
 
 ## **安装 curl**
  
- apt install -y curl
+ <div class="snippet" markdown="1">
+
+```
+apt install -y curl
+```
+ 
 
 ## **添加dns**
  
+ <div class="snippet" markdown="1">
+
+```
  echo 'nameserver 223.5.5.5'>>/etc/resolv.conf 
 
  echo 'nameserver 223.6.6.6'>>/etc/resolv.conf 
@@ -27,44 +40,87 @@
 
  echo 'nameserver 8.8.4.4'>>/etc/resolv.conf 
 
+```
+
 ---
 
 ##  **安装ufw**
+  <div class="snippet" markdown="1">
+
+```
+sudo apt-get install ufw
+```
  
- sudo apt-get install ufw
 
 ## **检查防火墙的状态**
  
- sudo ufw status
+   <div class="snippet" markdown="1">
+
+```
+sudo ufw status
+```
+
 
 ###### 显示为inactive
 
 
 ## **查询防火墙版本**
  
- sudo ufw version
+   <div class="snippet" markdown="1">
+
+```
+sudo ufw version
+```
+ 
+
 
 ## **开启/关闭防火墙**
  
- sudo ufw enable
- 
- sudo ufw disable
+  <div class="snippet" markdown="1">
+
+```
+sudo ufw enable
+```
+
+ <div class="snippet" markdown="1">
+
+```
+sudo ufw disable
+```
 
 ---
 
 ## **启用**
  
- sudo ufw enable
- 
- sudo ufw default deny
+   <div class="snippet" markdown="1">
+
+```
+sudo ufw enable
+```
+
+   <div class="snippet" markdown="1">
+
+```
+sudo ufw default deny
+```
+
  
 ###### 运行上诉两条命令后，开启系统防火墙，且开机自启，并关闭外部对本机的访问，但本机访问外部正常。
 
 ## **开启/禁用端口**
  
+   <div class="snippet" markdown="1">
+
+```
  sudo ufw allow [service]
- 
+```
+
+   <div class="snippet" markdown="1">
+
+```
  sudo ufw deny [service]
+```
+
 
 ---
 

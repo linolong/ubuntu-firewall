@@ -7,6 +7,8 @@
  ping ip 正常。
  检查后是防火墙的原因。
 
+---
+
  更新环境：
  apt update -y
 
@@ -22,6 +24,7 @@
 
  echo 'nameserver 8.8.4.4'>>/etc/resolv.conf 
 
+---
 
  安装ufw
  sudo apt-get install ufw
@@ -38,6 +41,8 @@
  sudo ufw enable
  sudo ufw disable
 
+---
+
  启用
  sudo ufw enable
  sudo ufw default deny
@@ -46,6 +51,8 @@
  开启/禁用端口
  sudo ufw allow [service]
  sudo ufw deny [service]
+
+---
 
  UFW 使用范例
  允许 80 端口
